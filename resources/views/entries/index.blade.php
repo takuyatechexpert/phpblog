@@ -6,6 +6,9 @@
 {{-- 読み込む順番に注意 --}}
 
 @section('content')
+<p>
+  <a href="#">新規投稿</a>
+</p>
   <ul>
     @foreach ($entries as $entry)
       <li>
