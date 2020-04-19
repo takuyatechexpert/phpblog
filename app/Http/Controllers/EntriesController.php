@@ -19,6 +19,11 @@ class EntriesController extends Controller
         $entry = Entry::findOrFail($id);
         // findOrFail:検索した値が見つからなければ404のエラー画面へ遷移してくれる
 
-        return view('entries.view', ['entry'=>$entry]);
+        return view('entries/view', ['entry'=>$entry]);
+    }
+    
+    public function form() {
+        
+        return view('entries/form');
     }
 }
