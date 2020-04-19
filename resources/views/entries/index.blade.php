@@ -6,9 +6,12 @@
 {{-- 読み込む順番に注意 --}}
 
 @section('content')
-<p>
-  <a href="#">新規投稿</a>
-</p>
+  <p>
+    {{-- <a href="/form/"> --}}
+    <a href="{{action("EntriesController@form")}}">
+      新規投稿
+    </a>
+  </p>
   <ul>
     @foreach ($entries as $entry)
       <li>
@@ -21,4 +24,4 @@
       </li>
     @endforeach
   </ul>
-  @endsection
+@endsection

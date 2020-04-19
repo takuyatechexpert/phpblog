@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'EntriesController@index');
 
+Route::get('/form', 'EntriesController@form');
+// 書く順番が悪くてviewが表示されなかった
+// おそらくEntriesController@viewが上にあると
+// EntriesController@viewが反応してしまいviewが表示されなかった
+
 Route::get('/{id}/', 'EntriesController@view');
